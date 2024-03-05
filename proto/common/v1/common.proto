@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package campusing.common.v1;
+
+message Document {
+    string content = 2;
+    optional string path = 3;
+}
+
+service DocumentService {
+    rpc CreateDocument(CreateDocumentRequest) returns (Document) {}
+}
+
+message CreateDocumentRequest {}
